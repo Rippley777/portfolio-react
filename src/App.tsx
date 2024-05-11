@@ -25,11 +25,11 @@ const queryClient = new QueryClient();
 function App() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        console.log('Logged in:', user);
-      } else {
-        console.log('No user logged in');
-      }
+      // if (user) {
+      //   console.log('Logged in:', user);
+      // } else {
+      //   console.log('No user logged in');
+      // }
     });
 
     // Cleanup subscription on unmount
