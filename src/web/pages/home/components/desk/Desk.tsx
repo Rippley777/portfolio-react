@@ -135,7 +135,7 @@ const DisplayText = () => {
       anchorX="center" // default
       anchorY="middle" // default
     >
-      {`10 years of React`}
+      {`I love Sam <3`}
     </Text>
   );
 };
