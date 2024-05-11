@@ -110,7 +110,7 @@ const Camera = ({ triggerChange }: { triggerChange?: boolean }) => {
 
   useEffect(() => {
     if (ready && positionY > 1) {
-      setTimeout(() => setPositionY((prev) => prev - 0.001), 1);
+      setTimeout(() => setPositionY((prev) => prev - 0.01), 10);
     }
   }, [positionY, ready]);
 
