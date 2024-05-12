@@ -1,0 +1,38 @@
+[
+  {
+    "id": 2,
+    "year": 2024,
+    "title": "Principle Studios",
+    "description": "Led a 5 person team building a 4 portal slakjdgls;adlgkjsdgl adsglkjdslgjj agdsljgldasjl adglkjdslkj jasgdlkjdsag algksdjlasjg ajsdlgk ldkgj ",
+    "image": "",
+    "cardColor": "bg-tetradic1",
+    "technology": "React // JavaScript // TypeScript // Redux // Prettier"
+  },
+  {
+    "id": 3,
+    "year": 2022,
+    "title": "Stackpath",
+    "description": "",
+    "image": "",
+    "cardColor": "bg-compliment",
+    "technology": "React // JavaScript // TypeScript // Redux // Prettier"
+  },
+  {
+    "id": 4,
+    "year": 2020,
+    "title": "Intuit",
+    "description": "I worked at Intuit",
+    "image": "",
+    "cardColor": "bg-tetradic2",
+    "technology": "React // JavaScript // TypeScript // Redux // Prettier"
+  },
+  {
+    "id": 5,
+    "year": 2017,
+    "title": "Match",
+    "description": "I worked at Match",
+    "image": "",
+    "cardColor": "bg-triad1",
+    "technology": "React // JavaScript // TypeScript // Redux // Prettier"
+  }
+]

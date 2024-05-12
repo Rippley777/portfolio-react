@@ -50,7 +50,7 @@ const Chair: React.FC<ModelProps> = ({ url, scale = [1, 1, 1] }) => {
         modelRef.current.position.z = 3.5;
       }
       if (modelRef.current.position.z > 0.3) {
-        modelRef.current.position.z -= 0.005;
+        modelRef.current.position.z -= 0.004;
       }
     }
   });
@@ -98,9 +98,24 @@ const Rug: React.FC<ModelProps> = ({ url, scale = [1, 1, 1] }) => {
   return gltf ? <primitive object={gltf.scene} ref={modelRef} /> : null;
 };
 
-const Camera = ({ triggerChange }: { triggerChange?: boolean }) => {
+type CameraProps = {
+  triggerChange?: boolean;
+  onNext?: () => void;
+};
+const Camera = ({ onNext, triggerChange }: CameraProps) => {
   const [ready, setReady] = useState(false);
   const [positionY, setPositionY] = useState(2);
+  const [positionZ, setPositionZ] = useState(2);
+
+  useEffect(() => {
+    if (triggerChange && ready && positionZ > 0) {
+      setTimeout(() => setPositionZ((prev) => prev - 0.01), 10);
+    }
+    if (triggerChange && positionZ < 0) {
+      // window.location.href = '/about';
+      onNext?.();
+    }
+  }, [triggerChange, onNext, positionZ, ready]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -117,17 +132,23 @@ const Camera = ({ triggerChange }: { triggerChange?: boolean }) => {
   return (
     <PerspectiveCamera
       makeDefault
-      position={[0, positionY, 2]}
+      position={[0, positionY, positionZ]}
       rotation={[0, 0, 0]}
     />
   );
 };
-const DisplayText = () => {
+
+type DisplayTextProps = {
+  onClick: () => void;
+};
+
+const DisplayText = ({ onClick }: DisplayTextProps) => {
   return (
     <Text
       font={
         'https://rawcdn.githack.com/google/fonts/3b179b729ac3306ab2a249d848d94ff08b90a0af/apache/robotoslab/static/RobotoSlab-Black.ttf'
       }
+      onClick={onClick}
       scale={0.1}
       textAlign="center"
       position={[0, 1.5, 0]}
@@ -139,10 +160,22 @@ const DisplayText = () => {
     </Text>
   );
 };
+const Loader: React.FC<ModelProps> = ({ url, scale = [1, 1, 1] }) => {
+  const gltf = useGLTFModel(url);
+  const modelRef = useRef<any>(null);
 
-const DeskModel: React.FC = () => {
+  useFrame(() => {});
+
+  return gltf ? <primitive object={gltf.scene} ref={modelRef} /> : null;
+};
+type DeskModelProps = {
+  onNext: () => void;
+};
+
+const DeskModel: React.FC<DeskModelProps> = ({ onNext }) => {
+  const [triggerChange, setTriggerChange] = useState(false);
   return (
-    <Canvas className="bg-gradient-to-tr from-primaryMonoDarkest to-primaryMonoDark">
+    <Canvas>
       <spotLight
         position={[0, 10, 0]}
         angle={0.25}
@@ -159,8 +192,10 @@ const DeskModel: React.FC = () => {
         decay={0}
         intensity={Math.PI}
       />
-      <DisplayText />
-      <Camera />
+      <Loader url={require('./react.glb')} />
+
+      <DisplayText onClick={() => setTriggerChange(true)} />
+      <Camera triggerChange={triggerChange} onNext={onNext} />
       <Desk url={require('./desk.glb')} />
       <Computer url={require('./computer.glb')} />
       <Chair url={require('./chair.glb')} />

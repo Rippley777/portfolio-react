@@ -30,3 +30,7 @@ code {
   font-weight: normal;
   font-style: normal;
 }
+
+.fixed-bg-attachment {
+  background-attachment: fixed !important;
+}

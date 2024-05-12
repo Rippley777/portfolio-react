@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { Action, ThunkAction, configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import rootReducer from './reducers';
@@ -26,3 +26,10 @@ export const persistor = persistStore(store);
 export default store;
 
 export type RootState = ReturnType<typeof rootReducer>;
+export type AppDispatch = typeof store.dispatch;
+export type AppThunk<ReturnType = void> = ThunkAction<
+  ReturnType,
+  RootState,
+  unknown,
+  Action<string>
+>;

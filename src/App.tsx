@@ -7,7 +7,6 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import store, { persistor } from './shared/store/store';
 import Home from './web/pages/home';
-import About from './web/pages/About';
 import Todos from './web/pages/todos';
 import Chat from './web/pages/chat';
 import Login from './web/pages/user/login';
@@ -42,7 +41,6 @@ function App() {
         <QueryClientProvider client={queryClient}>
           <Router>
             <Routes>
-              <Route path="/about" element={<About />} />
               <Route path="/todos" element={<Todos />} />
               <Route path="/chat" element={<Chat />} />
               <Route path="/login" element={<Login />} />
