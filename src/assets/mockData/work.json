@@ -1,38 +1,62 @@
 [
   {
-    "id": 2,
-    "year": 2024,
+    "id": 1,
+    "year": 2022,
+    "yearEnd": 2024,
     "title": "Principle Studios",
-    "description": "Led a 5 person team building a 4 portal slakjdgls;adlgkjsdgl adsglkjdslgjj agdsljgldasjl adglkjdslkj jasgdlkjdsag algksdjlasjg ajsdlgk ldkgj ",
+    "description": "Led a 5-person team of Sr. Engineers to build four user portals for First American using React, C# and .NET. This involved a giant refactor of the existing codebase, which was written in AngularJS. NX was used within React/Typescript and integrated into the current .NET solution to allow for incremental refactor.",
     "image": "",
-    "cardColor": "bg-tetradic1",
-    "technology": "React // JavaScript // TypeScript // Redux // Prettier"
+    "displayType": "auto-scroll"
+  },
+  {
+    "id": 2,
+    "year": 2019,
+    "yearEnd": 2022,
+    "title": "Stackpath",
+    "description": "Offering a cutting-edge platform for securing and delivering applications and websites, StackPath is a leading provider of edge computing services. I was responsible for the development of the customer portal, which allows users to manage their accounts, view analytics, and configure security settings. I also added websockets to their analytics dashboard to provide real-time data updates.",
+    "image": "",
+    "displayType": "auto-carousel",
+    "carousel": [
+      {
+        "image": "",
+        "imageAlt": "",
+        "caption": "Implimented real-time analytics using websockets on Apollo Server"
+      },
+      {
+        "image": "",
+        "imageAlt": "",
+        "caption": "Added new features and servers to existing network"
+      },
+      { "image": "", "imageAlt": "", "caption": "security" },
+      { "image": "", "imageAlt": "", "caption": "waf" }
+    ]
   },
   {
     "id": 3,
-    "year": 2022,
-    "title": "Stackpath",
-    "description": "",
+    "year": 2017,
+    "yearEnd": 2019,
+    "title": "Intuit",
+    "description": "I built the page that ended up in this marketing material! I also built various other pages and features in the Link portal, which is a platform that allows small businesses to manage their finances. I worked with a team of 5 engineers to build the new version of the portal using React, Redux, and Node.js. I also worked on the backend, which was built using Java and Spring Boot.",
     "image": "",
-    "cardColor": "bg-compliment",
-    "technology": "React // JavaScript // TypeScript // Redux // Prettier"
+    "displayType": "video-display"
   },
   {
     "id": 4,
-    "year": 2020,
-    "title": "Intuit",
-    "description": "I worked at Intuit",
-    "image": "",
-    "cardColor": "bg-tetradic2",
-    "technology": "React // JavaScript // TypeScript // Redux // Prettier"
-  },
-  {
-    "id": 5,
-    "year": 2017,
-    "title": "Match",
-    "description": "I worked at Match",
-    "image": "",
-    "cardColor": "bg-triad1",
-    "technology": "React // JavaScript // TypeScript // Redux // Prettier"
+    "year": 2016,
+    "yearEnd": 2017,
+    "title": "Copart",
+    "displayType": "featured-carousel",
+    "carousel": [
+      {
+        "image": "",
+        "imageAlt": "",
+        "caption": "Built a new version of the Copart website using React, Redux, and Node.js"
+      },
+      {
+        "image": "",
+        "imageAlt": "",
+        "caption": "Implemented a new search feature that allows users to search for vehicles by make, model, and year"
+      }
+    ]
   }
 ]

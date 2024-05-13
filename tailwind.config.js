@@ -8,13 +8,14 @@ module.exports = {
       colors,
       animation: {
         fadeIn: 'fadeIn 1s ease-in-out',
-        fadeInSlow: 'fadeIn 3s ease-in-out',
+        fadeInSlow: 'fadeIn 5s ease-in-out',
         fadeInFifteenSeconds: 'fadeIn 15s ease-in-out',
         fadeShowFiveSeconds: 'fadeInOut 5s ease-in-out',
         fadeShowTenSeconds: 'fadeInOut 10s ease-in-out',
         fadeShowFifteenSeconds: 'fadeInOut 15s ease-in-out',
         pulse: 'pulse 3.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         pulseSteady: 'pulse 7s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        scrollUp: 'scrollUp 40s ease-in-out infinite',
         slideIn: 'slideIn 5s ease-in-out',
         slideUp: 'slideUp 5s ease-in-out',
         swipeUp: 'swipeUp .1s ease-in-out',
@@ -34,6 +35,10 @@ module.exports = {
         pulse: {
           '0%, 100%': { opacity: 1 },
           '50%': { opacity: 0.5 },
+        },
+        scrollUp: {
+          from: { transform: 'translateY(0)' },
+          to: { transform: 'translateY(-80%)' },
         },
         slideIn: {
           from: { transform: 'translateX(-100%)' },

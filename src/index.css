@@ -11,7 +11,7 @@ body,
 body {
   margin: 0;
   font-family:
-    'Raleway',
+    'Fitzgerald',
     -apple-system,
     BlinkMacSystemFont,
     sans-serif;
@@ -24,6 +24,10 @@ code {
     monospace;
 }
 
+.font-fitzgerald {
+  font-family: 'Fitzgerald', sans-serif;
+}
+
 @font-face {
   font-family: 'Raleway';
   src: url('./assets/fonts/Raleway-VariableFont_wght.ttf') format('truetype');
@@ -31,6 +35,17 @@ code {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Fitzgerald';
+  src: url('./assets/fonts/fitzgerald.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .fixed-bg-attachment {
   background-attachment: fixed !important;
+}
+
+.contain-bg-size {
+  background-size: contain !important;
 }

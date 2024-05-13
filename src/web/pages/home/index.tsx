@@ -20,7 +20,7 @@ const Home = () => {
   }, [page, dispatch]);
 
   return (
-    <Page hideFooter hideHeader noPadding noBackground>
+    <Page hideFooter hideHeader noPadding>
       {page === 0 && <DeskModel onNext={() => setPage(1)} />}
       {page === 1 && (
         <h1 className="text-white">
