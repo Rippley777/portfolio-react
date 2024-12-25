@@ -156,7 +156,7 @@ const DisplayText = ({ onClick }: DisplayTextProps) => {
       anchorX="center" // default
       anchorY="middle" // default
     >
-      {`I love Sam <3`}
+      {`React 3D Portfolio`}
     </Text>
   );
 };
@@ -192,7 +192,6 @@ const DeskModel: React.FC<DeskModelProps> = ({ onNext }) => {
         decay={0}
         intensity={Math.PI}
       />
-      <Loader url={require('./react.glb')} />
 
       <DisplayText onClick={() => setTriggerChange(true)} />
       <Camera triggerChange={triggerChange} onNext={onNext} />

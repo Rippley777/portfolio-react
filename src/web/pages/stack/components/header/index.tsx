@@ -14,7 +14,7 @@ const StackHeaderItem = ({
   return (
     <div
       className={twMerge(
-        'text-white opacity-70 text-center py-1 px-2 hover:animate-pulse cursor-pointer',
+        'text-black opacity-70 text-center py-1 px-2 hover:animate-pulse cursor-pointer',
         active ? 'text-compliment animate-pulseSteady' : '',
       )}
       onClick={onClick}

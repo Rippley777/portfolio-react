@@ -18,7 +18,11 @@ const Portfolio = () => {
         <LoaderModel />
         <div className="text-3xl text-center">
           Say what you want, but React remains king! Here's to some cool things
-          I've built over the past decade!
+          <br />
+          I've built over the past decade! Or click to see{' '}
+          <a className="text-react underline" href="/stack">
+            what's next
+          </a>
         </div>
       </div>
       <div>

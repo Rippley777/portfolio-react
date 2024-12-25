@@ -77,12 +77,14 @@ const PortfolioItem = (item) => {
             <DeviceCarousel carousel={carousel} inView={inView} title={title} />
           )}
           {inView && displayType === 'video-display' && (
-            <video width="750" height="500" autoPlay>
-              <source
-                src={require('../../../../assets/videos/ito.mp4')}
-                type="video/mp4"
-              />
-            </video>
+            <div className="flex justify-center">
+              <video width="750" height="500" autoPlay>
+                <source
+                  src={require('../../../../assets/videos/ito.mp4')}
+                  type="video/mp4"
+                />
+              </video>
+            </div>
           )}
           {inView && displayType === 'featured-carousel' && (
             <FeaturedCarousel
